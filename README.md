@@ -1,5 +1,5 @@
 # AI-BlokNastava
-# AI пројекат: Анализа коментара
+# AI пројекат: Превиђање резултата
 
 Скуп података преузет је са URL-a : generisano sa https://claude.ai/
 
