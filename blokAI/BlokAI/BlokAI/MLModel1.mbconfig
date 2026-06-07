@@ -1,0 +1,457 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "KeepDiacritics": false,
+    "KeepPunctuations": false,
+    "AllowQuoting": false,
+    "Type": "TabularFile",
+    "FilePath": "C:\\Users\\hp\\Downloads\\miami_heat_ML_dataset.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "game_id",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "sezona",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "datum",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "protivnik",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "je_domacin",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "forma_5",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "forma_10",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "forma_opp_5",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "forma_opp_10",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "label",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.035104072777060624,
+        "RuntimeInSeconds": 0.336,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e8",
+          "e0": {
+            "OutputColumnNames": [
+              "sezona"
+            ],
+            "InputColumnNames": [
+              "sezona"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10"
+            ],
+            "InputColumnNames": [
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10"
+            ]
+          },
+          "e2": {
+            "InputColumnName": "datum",
+            "OutputColumnName": "datum"
+          },
+          "e3": {
+            "InputColumnName": "protivnik",
+            "OutputColumnName": "protivnik"
+          },
+          "e4": {
+            "InputColumnNames": [
+              "sezona",
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10",
+              "datum",
+              "protivnik"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e8": {
+            "L1Regularization": 5.668331,
+            "L2Regularization": 0.29954574,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.034501789750968695,
+        "RuntimeInSeconds": 0.303,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e8",
+          "e0": {
+            "OutputColumnNames": [
+              "sezona"
+            ],
+            "InputColumnNames": [
+              "sezona"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10"
+            ],
+            "InputColumnNames": [
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10"
+            ]
+          },
+          "e2": {
+            "InputColumnName": "datum",
+            "OutputColumnName": "datum"
+          },
+          "e3": {
+            "InputColumnName": "protivnik",
+            "OutputColumnName": "protivnik"
+          },
+          "e4": {
+            "InputColumnNames": [
+              "sezona",
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10",
+              "datum",
+              "protivnik"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e8": {
+            "L1Regularization": 3.0604904,
+            "L2Regularization": 0.50483215,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.034001819697043009,
+        "RuntimeInSeconds": 0.309,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e8",
+          "e0": {
+            "OutputColumnNames": [
+              "sezona"
+            ],
+            "InputColumnNames": [
+              "sezona"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10"
+            ],
+            "InputColumnNames": [
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10"
+            ]
+          },
+          "e2": {
+            "InputColumnName": "datum",
+            "OutputColumnName": "datum"
+          },
+          "e3": {
+            "InputColumnName": "protivnik",
+            "OutputColumnName": "protivnik"
+          },
+          "e4": {
+            "InputColumnNames": [
+              "sezona",
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10",
+              "datum",
+              "protivnik"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e8": {
+            "L1Regularization": 3.05126,
+            "L2Regularization": 0.5043537,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.033499062418418823,
+        "RuntimeInSeconds": 0.338,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e8",
+          "e0": {
+            "OutputColumnNames": [
+              "sezona"
+            ],
+            "InputColumnNames": [
+              "sezona"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10"
+            ],
+            "InputColumnNames": [
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10"
+            ]
+          },
+          "e2": {
+            "InputColumnName": "datum",
+            "OutputColumnName": "datum"
+          },
+          "e3": {
+            "InputColumnName": "protivnik",
+            "OutputColumnName": "protivnik"
+          },
+          "e4": {
+            "InputColumnNames": [
+              "sezona",
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10",
+              "datum",
+              "protivnik"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e8": {
+            "L1Regularization": 3.0589037,
+            "L2Regularization": 0.5063935,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.03323006281716312,
+        "RuntimeInSeconds": 0.29,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e8",
+          "e0": {
+            "OutputColumnNames": [
+              "sezona"
+            ],
+            "InputColumnNames": [
+              "sezona"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10"
+            ],
+            "InputColumnNames": [
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10"
+            ]
+          },
+          "e2": {
+            "InputColumnName": "datum",
+            "OutputColumnName": "datum"
+          },
+          "e3": {
+            "InputColumnName": "protivnik",
+            "OutputColumnName": "protivnik"
+          },
+          "e4": {
+            "InputColumnNames": [
+              "sezona",
+              "game_id",
+              "je_domacin",
+              "forma_5",
+              "forma_10",
+              "forma_opp_5",
+              "forma_opp_10",
+              "datum",
+              "protivnik"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e8": {
+            "L1Regularization": 4.45999,
+            "L2Regularization": 1.4161654,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "OneHotEncoding",
+      "e1": "ReplaceMissingValues",
+      "e2": "FeaturizeText",
+      "e3": "FeaturizeText",
+      "e4": "Concatenate",
+      "e5": "FastTreeRegression",
+      "e6": "FastForestRegression",
+      "e7": "LightGbmRegression",
+      "e8": "LbfgsPoissonRegressionRegression",
+      "e9": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * e2 * e3 * e4 * (e5 + e6 + e7 + e8 + e9)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "C:\\Users\\hp\\Desktop\\blokAI\\BlokAI\\BlokAI\\MLModel1.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 1000,
+    "LabelColumn": "label",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}
